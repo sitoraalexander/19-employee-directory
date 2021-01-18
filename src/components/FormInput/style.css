@@ -1,6 +1,6 @@
 
 .search-div button:hover{
-    border: grey;
-    background: grey;
+    border: rgb(21, 92, 245);
+    background:   rgb(21, 92, 245);
     color: white;
 }

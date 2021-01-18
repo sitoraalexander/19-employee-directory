@@ -6,14 +6,13 @@ import "./style.css";
 import DataAreaContext from "../../utils/DataAreaContext"
 import FormInput from "../FormInput";
 
-//Set states of employees in directory, set state of headings for table columns
 function DataArea() {
     const [userState, setUserState] = useState({
         employees: [],
         filteredEmployees: [],
         alphabetical: true,
         headings: [
-            { name: "Image" },
+            { name: "Picture" },
             { name: "Name" },
             { name: "Phone" },
             { name: "Email" },
@@ -22,7 +21,6 @@ function DataArea() {
     });
 
 
-    //handlsort function, changes the order to the opposite of its current state 
     const handleOrder = heading => {
         if (userState.alphabetical === true) {
             setUserState({
@@ -35,27 +33,19 @@ function DataArea() {
         }
 
 
-        //order employees alphabetically depending on name
-        //compare a to b, and b to a
         const compareEmployees = (a, b) => {
-            // if alph. true, then 
             if (userState.alphabetical === true) {
-                //ensure a heading and b heading are defined, otherwise a will order before b
                 if (a[heading] === undefined) {
                     return 1;
 
                 } else if (b[heading] === undefined) {
                     return -1;
-                    //if heading is "name", compare a and b to see which comes first
-                    //if a comes before b, a positive number will be returned
                 } else if (heading === "name") {
                     return a[heading].first.localeCompare(b[heading].first);
                 } else {
-                    //if a positive number is not returned, this will return a positive number
                     return b[heading] - a[heading];
                 }
             } else {
-                //ensure a heading and b heading are defined, otherwise a will order before b
                 if (a[heading] === undefined) {
                     return 1;
                 } else if (b[heading] === undefined) {
@@ -105,7 +95,7 @@ function DataArea() {
                 employees: results.data.results,
                 filteredEmployees: results.data.results,
                 headings: [
-                    { name: "Image" },
+                    { name: "Picture" },
                     { name: "Name" },
                     { name: "Phone" },
                     { name: "Email" },

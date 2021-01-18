@@ -5,13 +5,11 @@ import DataAreaContext from "../../utils/DataAreaContext";
 import "./style.css";
 
 
-//DataBody component for table body
 const DataTable = () => {
     const context = useContext(DataAreaContext);
 
     return (
-        //display headings from heading state (map)
-        //When click on name, sort by name
+        
         <div className="data-table mt-4">
             <table id="table" className="table table-striped">
                 <thead>
