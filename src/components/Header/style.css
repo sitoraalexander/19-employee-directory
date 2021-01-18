@@ -1,3 +1,9 @@
 .jumbotron {
-    text-align: center;
-}
+        padding: 30px 0;
+        color: #1644db;
+        background-color: #101D42;
+        width: 100%;
+        text-align: center;
+        border-bottom: 5px solid #1644db;
+        margin-bottom: 10px;
+    }
