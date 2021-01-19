@@ -6,6 +6,6 @@
 ### Check out the live app here: https://employee-directory-sa.herokuapp.com/
 
 ## !!! IMPORTANT!!!
-* If the link gives you an application error, plese refresh the pages and the app will work.
+* If the link gives you an application error, please refresh the pages and the app will work.
 
 ### Enjoy :)
